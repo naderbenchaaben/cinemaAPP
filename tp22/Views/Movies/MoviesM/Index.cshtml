@@ -1,0 +1,25 @@
+﻿@model IEnumerable <tp22.Models.Movie>
+
+<h2>Index</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(x=>x.Title)</th>
+            <th>@Html.DisplayNameFor(x=>x.ReleaseDate)</th>
+            <th>@Html.DisplayNameFor(x=>x.Genre)</th>
+            <th>@Html.DisplayNameFor(mm=>mm.Price)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(x=>item.Title)</td>
+                <td>@Html.DisplayFor(x=>item.ReleaseDate)</td>
+                <td>@Html.DisplayFor(x=>item.Genre)</td>
+                <td>@Html.DisplayFor(x=>item.Price)</td>
+            </tr>
+        }
+    </tbody>     
+</table>

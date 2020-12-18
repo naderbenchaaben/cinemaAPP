@@ -1,0 +1,42 @@
+﻿@model tp22.Models.Participation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Participation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor.Firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor.Firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Movie.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Movie.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Role)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Role)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
